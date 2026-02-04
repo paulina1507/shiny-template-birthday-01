@@ -16,8 +16,9 @@ const invitationData = {
   musica: "assets/music/cancion.mp3",
 
   galeria: [
-    "assets/gallery/foto1.jpg",
-    "assets/gallery/foto2.jpg",
-    "assets/gallery/foto3.jpg"
+    "assets/gallery/foto1.png",
+    "assets/gallery/foto2.png",
+    "assets/gallery/foto3.png",
+    "assets/gallery/foto1.png"
   ]
 };
