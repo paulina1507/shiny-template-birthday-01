@@ -605,7 +605,7 @@ body {
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  z-index: 5;
+  z-index: 20;
 }
 
 .confetti {
@@ -656,6 +656,80 @@ body.ambient-animations .decor-rainbow {
 
 body.ambient-animations .cloud-layer {
   animation: cloudDrift 22s ease-in-out infinite;
+}
+
+.gif-character {
+  position: absolute;
+  bottom: 24px; /* ⬆️ antes estaba en 0 */
+  width: 140px;
+  height: auto;
+  pointer-events: none;
+  user-select: none;
+  z-index: 4;
+  filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.15));
+}
+
+.gif-gallery {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 260px;
+  z-index: 4;
+}
+
+.gif-final {
+  width: 160px;
+  margin: 12px auto 0;
+  display: block;
+}
+
+.gif-left {
+  left: 16px;
+}
+
+.gif-right {
+  right: 16px;
+}
+
+.page.cover.active .gif-left {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.page.cover.active .gif-right {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.gif-left {
+  animation: swayLeft 4s ease-in-out infinite;
+}
+
+.gif-right {
+  animation: swayRight 4s ease-in-out infinite;
+}
+
+@keyframes swayLeft {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes swayRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes cloudDrift {
@@ -756,6 +830,29 @@ body.ambient-animations .cloud-layer {
 @media (max-width: 480px) {
   .decor-character {
     top: 80px;
+  }
+
+  .gif-character {
+    width: 200px;
+    top: 400px;
+    bottom: 16px;
+  }
+
+  .gif-left {
+    left: 8px;
+  }
+
+  .gif-right {
+    right: 8px;
+  }
+
+  .gif-gallery {
+    width: 220px;
+    top: 340px;
+  }
+
+  .gif-final {
+    width: 120px;
   }
 
   .decor-stars {
