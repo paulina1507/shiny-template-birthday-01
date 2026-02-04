@@ -1,5 +1,9 @@
-const btnUbicacion = document.getElementById("btnUbicacion");
+document.addEventListener("DOMContentLoaded", () => {
+  const btnUbicacion = document.getElementById("btnUbicacion");
 
-btnUbicacion.addEventListener("click", () => {
-  window.open(invitationData.ubicacionUrl, "_blank");
+  if (!btnUbicacion) return;
+
+  btnUbicacion.addEventListener("click", () => {
+    window.open(invitationData.ubicacion.url, "_blank");
+  });
 });

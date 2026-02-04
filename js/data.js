@@ -10,7 +10,7 @@ const invitationData = {
 
   ubicacion: {
     texto: "Ubicación",
-    url: "https://maps.google.com/?q=..."
+    url: "https://maps.app.goo.gl/MhuDaL4aszC3zR2u9"
   },
 
   musica: "assets/music/cancion.mp3",
