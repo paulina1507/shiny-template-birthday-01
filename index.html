@@ -1,142 +1,170 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Invitación</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fredoka:wght@500;600&display=swap"
-    rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
+  <body>
+    <audio id="music" muted playsinline></audio>
+    <div id="audioGate" class="audio-gate">
+      <p>🎶 Toca para iniciar la invitación</p>
+    </div>
 
-<body>
-  <audio id="music" muted playsinline></audio>
-  <div id="audioGate" class="audio-gate">
-    <p>🎶 Toca para iniciar la invitación</p>
-  </div>
+    <section class="book">
+      <!-- PORTADA -->
+      <div class="page cover active">
+        <div class="invitation-frame">
+          <!-- CAPAS DECORATIVAS -->
+          <div id="confettiLayer" class="confetti-layer"></div>
+          <img src="assets/svg/globos.svg" class="svg decor decor-bg" />
+          <img src="assets/svg/estrellas.svg" class="svg decor decor-stars" />
 
-  <section class="book">
-    <!-- PORTADA -->
-    <div class="page cover active">
-      <div class="invitation-frame">
-        <!-- CAPAS DECORATIVAS -->
-        <img src="assets/svg/globos.svg" class="svg decor decor-bg" />
-        <img src="assets/svg/estrellas.svg" class="svg decor decor-stars" />
+          <!-- 🌈 GRUPO ARCOÍRIS + TEXTO + NUBES -->
+          <div class="rainbow-group">
+            <!-- ARCOÍRIS -->
+            <img src="assets/svg/arcoiris.svg" class="decor-rainbow" />
 
-        <!-- 🌈 GRUPO ARCOÍRIS + TEXTO + NUBES -->
-        <div class="rainbow-group">
-          <!-- ARCOÍRIS -->
-          <img src="assets/svg/arcoiris.svg" class="decor-rainbow" />
+            <!-- ✨ TEXTO DENTRO DEL ARCO -->
+            <div class="rainbow-content">
+              <h1 id="nombre" class="nombre"></h1>
+              <p class="cumple">cumple</p>
+              <div class="age" id="edad"></div>
 
-          <!-- ✨ TEXTO DENTRO DEL ARCO -->
-          <div class="rainbow-content">
-            <h1 id="nombre" class="nombre"></h1>
-            <p class="cumple">cumple</p>
-            <div class="age" id="edad"></div>
+              <h2 class="faltan">Faltan</h2>
 
-            <h2 class="faltan">Faltan</h2>
+              <div id="countdown" class="countdown">
+                <div class="cd-item">
+                  <span id="cd-days">0</span>
+                  <small>días</small>
+                </div>
 
-            <div id="countdown" class="countdown">
-              <div class="cd-item">
-                <span id="cd-days">0</span>
-                <small>días</small>
-              </div>
+                <div class="cd-item">
+                  <span id="cd-hours">0</span>
+                  <small>hrs</small>
+                </div>
 
-              <div class="cd-item">
-                <span id="cd-hours">0</span>
-                <small>hrs</small>
-              </div>
+                <div class="cd-item">
+                  <span id="cd-minutes">0</span>
+                  <small>min</small>
+                </div>
 
-              <div class="cd-item">
-                <span id="cd-minutes">0</span>
-                <small>min</small>
-              </div>
-
-              <div class="cd-item">
-                <span id="cd-seconds">0</span>
-                <small>seg</small>
+                <div class="cd-item">
+                  <span id="cd-seconds">0</span>
+                  <small>seg</small>
+                </div>
               </div>
             </div>
 
+            <!-- ☁️ NUBE IZQUIERDA -->
+            <div class="cloud-layer cloud-left">
+              <img src="assets/svg/nube-izq.svg" class="cloud-svg" />
+              <span class="cloud-text">¡No faltes!</span>
+            </div>
+
+            <!-- ☁️ NUBE DERECHA -->
+            <div class="cloud-layer cloud-right">
+              <img src="assets/svg/nube-der.svg" class="cloud-svg" />
+              <button
+                id="btnUbicacion"
+                class="cloud-btn"
+                type="button"
+                aria-label="Abrir ubicación en Google Maps"
+              >
+                Ubicación
+              </button>
+            </div>
           </div>
 
-          <!-- ☁️ NUBE IZQUIERDA -->
-          <div class="cloud-layer cloud-left">
-            <img src="assets/svg/nube-izq.svg" class="cloud-svg" />
-            <span class="cloud-text">¡No faltes!</span>
-          </div>
-
-          <!-- ☁️ NUBE DERECHA -->
-          <div class="cloud-layer cloud-right">
-            <img src="assets/svg/nube-der.svg" class="cloud-svg" />
-            <button id="btnUbicacion" class="cloud-btn" type="button" aria-label="Abrir ubicación en Google Maps">
-              Ubicación
-            </button>
-          </div>
+          <!-- 🐶 PERSONAJE -->
+          <img
+            src="assets/svg/personaje.svg"
+            class="svg decor decor-character"
+          />
         </div>
 
-        <!-- 🐶 PERSONAJE -->
-        <img src="assets/svg/personaje.svg" class="svg decor decor-character" />
+        <button class="next-page">→</button>
       </div>
 
-      <button class="next-page">→</button>
-    </div>
+      <!-- EVENTO -->
+      <div class="page gallery-page">
+        <button class="prev-page">←</button>
+        <h2 class="gallery-title">Momentos especiales</h2>
+        <div class="gallery-grid" id="gallery"></div>
+        <button class="next-page">→</button>
+      </div>
 
-    <!-- EVENTO -->
-    <div class="page gallery-page">
-      <button class="prev-page">←</button>
-      <h2 class="gallery-title">Momentos especiales 💜</h2>
-      <div class="gallery-grid" id="gallery"></div>
-      <button class="next-page">→</button>
-    </div>
+      <!-- MENSAJE FINAL -->
+      <div class="page final-page">
+        <button class="prev-page">←</button>
 
-    <!-- MENSAJE FINAL -->
-    <div class="page final-page">
-      <button class="prev-page">←</button>
+        <div class="final-card">
+          <h2 class="final-title">¡Estás invitado!</h2>
 
-      <div class="final-card">
-        <h2 class="final-title">¡Estás invitado! ✨</h2>
+          <p class="final-text">
+            Acompáñanos a celebrar el cumpleaños de
+            <strong id="nombreFinal" class="final-name"></strong> 🎉
+          </p>
 
-        <p class="final-text">
-          Acompáñanos a celebrar el cumpleaños de
-          <strong id="nombreFinal" class="final-name"></strong> 🎉
-        </p>
-
-        <div class="final-date">
-          <div class="date-item">
-            <span class="icon">📅</span>
-            <span id="fechaFinal"></span>
+          <div class="final-date">
+            <div class="date-item">
+              <span class="icon">📅</span>
+              <span id="fechaFinal"></span>
+            </div>
+            <div class="date-item">
+              <span class="icon">⏰</span>
+              <span id="horaFinal"></span>
+            </div>
           </div>
-          <div class="date-item">
-            <span class="icon">⏰</span>
-            <span id="horaFinal"></span>
-          </div>
+
+          <p class="final-footer">
+            ¡Será un día muy especial y nos encantaría verte ahí! 💜
+          </p>
         </div>
-
-        <p class="final-footer">
-          ¡Será un día muy especial y nos encantaría verte ahí! 💜
-        </p>
       </div>
+    </section>
+
+    <div class="gallery-modal" id="galleryModal">
+      <button class="gallery-close" id="galleryClose">✕</button>
+      <img id="galleryModalImg" alt="Foto ampliada" />
     </div>
 
-  </section>
+    <button
+      id="audioToggle"
+      class="audio-fab"
+      type="button"
+      aria-label="Reproducir música"
+      aria-pressed="false"
+    >
+      <img
+        src="assets/svg/play.svg"
+        class="audio-icon audio-icon--play"
+        alt=""
+        aria-hidden="true"
+      />
 
-  <div class="gallery-modal" id="galleryModal">
-    <button class="gallery-close" id="galleryClose">✕</button>
-    <img id="galleryModalImg" alt="Foto ampliada" />
-  </div>
+      <img
+        src="assets/svg/pause.svg"
+        class="audio-icon audio-icon--pause"
+        alt=""
+        aria-hidden="true"
+      />
+    </button>
 
-  <script src="js/data.js"></script>
-  <script src="js/music.js"></script>
-  <script src="js/render.js"></script>
-  <script src="js/flip.js"></script>
-  <script src="js/countdown.js"></script>
-  <script src="js/gallery.js"></script>
-  <script src="js/location.js"></script>
-
-</body>
-
+    <script src="js/data.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/confetti.js"></script>
+    <script src="js/flip.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/location.js"></script>
+  </body>
 </html>
