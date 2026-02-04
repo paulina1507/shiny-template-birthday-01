@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invitación</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <audio id="music" loop></audio>
+
+    <section class="book">
+      <!-- PORTADA -->
+      <div class="page cover active">
+        <div class="invitation-frame">
+          <!-- CAPAS DECORATIVAS -->
+          <img src="assets/svg/globos.svg" class="svg decor decor-bg" />
+          <img src="assets/svg/estrellas.svg" class="svg decor decor-stars" />
+
+          <!-- 🌈 GRUPO ARCOÍRIS + TEXTO + NUBES -->
+          <div class="rainbow-group">
+            <!-- ARCOÍRIS -->
+            <img src="assets/svg/arcoiris.svg" class="decor-rainbow" />
+
+            <!-- ✨ TEXTO DENTRO DEL ARCO -->
+            <div class="rainbow-content">
+              <h1 id="nombre" class="nombre"></h1>
+              <p class="cumple">cumple</p>
+              <div class="age" id="edad"></div>
+
+              <h2 class="faltan">Faltan</h2>
+              <div id="countdown"></div>
+            </div>
+
+            <!-- ☁️ NUBE IZQUIERDA -->
+            <div class="cloud-layer cloud-left">
+              <img src="assets/svg/nube-izq.svg" class="cloud-svg" />
+              <span class="cloud-text">¡No faltes!</span>
+            </div>
+
+            <!-- ☁️ NUBE DERECHA -->
+            <div class="cloud-layer cloud-right">
+              <img src="assets/svg/nube-der.svg" class="cloud-svg" />
+              <button id="btnUbicacion" class="cloud-btn">Ubicación</button>
+            </div>
+          </div>
+
+          <!-- 🐶 PERSONAJE -->
+          <img
+            src="assets/svg/personaje.svg"
+            class="svg decor decor-character"
+          />
+        </div>
+
+        <button class="next-page">→</button>
+      </div>
+
+      <!-- EVENTO -->
+      <div class="page">
+        <button class="prev-page">←</button>
+        <h2>Galería</h2>
+        <div class="gallery" id="gallery"></div>
+        <button class="next-page">→</button>
+      </div>
+
+      <!-- MENSAJE FINAL -->
+      <div class="page">
+        <button class="prev-page">←</button>
+
+        <div class="final-message">
+          <h2>¡Estás invitado!</h2>
+
+          <p>
+            Acompáñanos a celebrar el cumpleaños de
+            <strong id="nombreFinal"></strong> 🎉
+          </p>
+
+          <p class="fecha-evento">
+            📅 <span id="fechaFinal"></span><br />
+            ⏰ <span id="horaFinal"></span>
+          </p>
+
+          <p class="despedida">
+            ¡Será un día muy especial y nos encantaría verte ahí! 💜
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/data.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/flip.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/location.js"></script>
+  </body>
+</html>
