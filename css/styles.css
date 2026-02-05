@@ -54,7 +54,7 @@ body {
   transform: translateX(-50%);
   text-align: center;
   color: white;
-  z-index: 8;
+  z-index: 6;
 }
 
 .nombre {
@@ -128,9 +128,9 @@ body {
   position: relative;
   background: rgba(255, 255, 255, 0.15);
   border-radius: 14px;
-  padding: 4px 6px;
+  padding: 4px 4px;
   text-align: center;
-  min-width: 52px;
+  min-width: 50px;
 }
 
 .cd-item span {
@@ -306,7 +306,7 @@ body {
   position: absolute;
   width: 350px;
   bottom: -55px;
-  z-index: 6;
+  z-index: 7;
 }
 
 .cloud-left {
@@ -326,7 +326,6 @@ body {
 
 .cloud-text,
 .cloud-btn {
-  z-index: 7;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -562,7 +561,7 @@ body {
   top: 16px;
   right: 16px;
   bottom: auto;
-  z-index: 10;
+  z-index: 9999;
 
   width: 52px;
   height: 52px;
@@ -602,11 +601,11 @@ body {
 }
 
 .confetti-layer {
-  position: fixed; /* 👈 CLAVE */
+  position: absolute;
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  z-index: 9; /* por debajo del audio-fab (9999) */
+  z-index: 20;
 }
 
 .confetti {
@@ -644,7 +643,7 @@ body {
 
 /* Cuando termina el confeti */
 body.ambient-animations .decor-bg {
-  animation: floatBalloons 18s ease-in-out infinite;
+  animation: floatBalloons 7s ease-in-out infinite;
 }
 
 body.ambient-animations .decor-stars {
@@ -656,7 +655,7 @@ body.ambient-animations .decor-rainbow {
 }
 
 body.ambient-animations .cloud-layer {
-  animation: cloudDrift 22s ease-in-out infinite;
+  animation: cloudDrift 18s ease-in-out infinite;
 }
 
 .gif-character {
@@ -862,7 +861,7 @@ body.ambient-animations .cloud-layer {
   }
 
   .decor-bg {
-    top: 35px;
+    top: -8px;
   }
 
   .rainbow-content {
