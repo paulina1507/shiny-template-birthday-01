@@ -54,7 +54,7 @@ body {
   transform: translateX(-50%);
   text-align: center;
   color: white;
-  z-index: 6;
+  z-index: 8;
 }
 
 .nombre {
@@ -228,7 +228,7 @@ body {
 
 /* orden de capas */
 .decor-bg {
-  z-index: 1;
+  z-index: 0;
   top: 25px;
 }
 
@@ -306,7 +306,7 @@ body {
   position: absolute;
   width: 350px;
   bottom: -55px;
-  z-index: 7;
+  z-index: 10;
 }
 
 .cloud-left {
@@ -601,11 +601,11 @@ body {
 }
 
 .confetti-layer {
-  position: absolute;
+  position: fixed; /* 👈 CLAVE */
   inset: 0;
   pointer-events: none;
   overflow: hidden;
-  z-index: 20;
+  z-index: 9998; /* por debajo del audio-fab (9999) */
 }
 
 .confetti {
@@ -861,7 +861,7 @@ body.ambient-animations .cloud-layer {
   }
 
   .decor-bg {
-    top: -8px;
+    top: 35px;
   }
 
   .rainbow-content {
